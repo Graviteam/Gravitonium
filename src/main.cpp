@@ -1393,7 +1393,6 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex)
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
     CAmount nSubsidy = 125 * COIN;
-    if (nHeight==1) return COIN * 10000000;
 
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
 

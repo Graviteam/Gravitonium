@@ -13,7 +13,6 @@ sudo apt-get install \
 
 if [ ! -r ~/.votecoin/votecoin.conf ]; then
    mkdir -p ~/.votecoin
-   echo "addnode=mainnet.votecoin.site" >~/.votecoin/votecoin.conf
    echo "rpcuser=username" >>~/.votecoin/votecoin.conf
    echo "rpcpassword=`head -c 32 /dev/urandom | base64`" >>~/.votecoin/votecoin.conf
 fi

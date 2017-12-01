@@ -450,7 +450,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Unix: ~/.zcash
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "VoteCoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Gravitonium";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -462,10 +462,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "VoteCoin";
+    return pathRet / "Gravitonium";
 #else
     // Unix
-    return pathRet / ".votecoin";
+    return pathRet / ".gravitonium";
 #endif
 #endif
 }
@@ -582,7 +582,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "votecoin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "gravitonium.conf"));
     if (!pathConfigFile.is_complete())
         pathConfigFile = GetDataDir(false) / pathConfigFile;
 
@@ -902,7 +902,7 @@ std::string LicenseInfo()
     return "\n" +
            FormatParagraph(strprintf(_("Copyright (C) 2009-%i The Bitcoin Core Developers"), COPYRIGHT_YEAR)) + "\n" +
            FormatParagraph(strprintf(_("Copyright (C) 2015-%i The Zcash Developers"), COPYRIGHT_YEAR)) + "\n" +
-           FormatParagraph(strprintf(_("Copyright (C) 2015-%i The VoteCoin Developers"), COPYRIGHT_YEAR)) + "\n" +
+           FormatParagraph(strprintf(_("Copyright (C) 2017-%i Graviteam"), COPYRIGHT_YEAR)) + "\n" +
            "\n" +
            FormatParagraph(_("This is experimental software.")) + "\n" +
            "\n" +

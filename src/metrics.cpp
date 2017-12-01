@@ -265,7 +265,7 @@ int printMiningStatus(bool mining)
         lines++;
     } else {
         std::cout << _("You are currently not mining.") << std::endl;
-        std::cout << _("To enable mining, add 'gen=1' to your votecoin.conf and restart.") << std::endl;
+        std::cout << _("To enable mining, add 'gen=1' to your gravitonium.conf and restart.") << std::endl;
         lines += 2;
     }
     std::cout << std::endl;
@@ -451,7 +451,7 @@ void ThreadShowMetricsScreen()
         std::cout << std::endl;
 
         // Thank you text
-        std::cout << _("Thank you for running a VoteCoin node!") << std::endl;
+        std::cout << _("Thank you for running a Gravitonium node!") << std::endl;
         std::cout << _("You're helping to strengthen the network and contributing to a social good :)") << std::endl;
     }
 
